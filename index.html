@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .caption {
+            display: none; /* Hide captions by default */
+        }
+    </style>
+    <title>Prince Fridilo Long Shot Ticket</title>
+</head>
+
+<body>
+    <header>
+        <h1>Today's Ticket</h1>
+    </header>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="ticket1.jpg" alt="Image 1">
+            <div class="caption">Ticket Code = E4BCEB29 <BR> Stake responsibly</BR></div>
+        </div>
+        <div class="gallery-item">
+            <img src="ticket2.jpg" alt="Image 2">
+            <div class="caption">Ticket Code = 1DFAD94E <BR>Stake responsibly</BR></div>
+        </div>
+        <div class="gallery-item">
+            <img src="ticket3.jpg" alt="Image 3">
+            <div class="caption">Ticket Code = 060C49883 <BR>Stake responsibly</BR></div>
+        </div>
+    </div>
+
+    <script>
+        var password;
+        var pass1 = "2023";
+        password = prompt('Please enter your password', '');
+
+        if (password === pass1) {
+            // Correct password, show the captions
+            var captions = document.querySelectorAll(".caption");
+            captions.forEach(function (caption) {
+                caption.style.display = "block";
+            });
+        } else {
+            // Wrong password, display an error message
+            alert('Wrong Password Scammer');
+            // Prevent the page from loading further
+            document.body.innerHTML = '<h1>Wrong Password Scammer</h1>';
+        }
+    </script>
+</body>
+
+</html>

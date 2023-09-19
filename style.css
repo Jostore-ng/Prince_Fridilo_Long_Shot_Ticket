@@ -1,0 +1,61 @@
+/* Reset some default styles */
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #3498db, #e74c3c); /* Gradient background color */
+    color: #fff; /* Text color */
+}
+
+header {
+    background-color: #333; /* Header background color */
+    color: #fff; /* Header text color */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.gallery-item {
+    width: calc(33.33% - 20px); /* Three items per row with some spacing on larger screens */
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for each item */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    text-align: center; /* Center align the content */
+    position: relative; /* Allows positioning the caption */
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center align the image horizontally */
+}
+
+.caption {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for captions */
+    color: #000; /* Text color for captions */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(100% - 20px); /* One item per row on smaller screens */
+    }
+}
